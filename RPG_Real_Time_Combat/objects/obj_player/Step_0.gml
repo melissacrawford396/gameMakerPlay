@@ -1,3 +1,5 @@
+if (instance_exists(obj_dialog)) exit;
+
 // horizontal: D=1, A=-1
 // Gamemaker: x+1 --> right. x-1 <-- left
 var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
