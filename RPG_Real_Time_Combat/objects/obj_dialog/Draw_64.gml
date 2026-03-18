@@ -12,7 +12,10 @@ _dy += 16;
 draw_set_font(Font1);
 
 var _name = messages[current_message].name;
+draw_set_color(global.char_colors[$ _name]);
 draw_text(_dx, _dy, _name);
+draw_set_color(c_white);
+
 
 _dy += 40; // draw text 40 pixels below the name
 
