@@ -14,6 +14,17 @@ char_colors = {
     "Singh": c_aqua
 }
 
+room1_end = [
+{
+    name:"Cross", 
+    msg: "It tis the end of Room!"
+},
+{
+    name:"Cross", 
+    msg: "Continue to the next!"
+},
+]
+
 welcome_dialog = [
 {
     name:"Cross", 
@@ -44,6 +55,6 @@ mel_diag1 = [
 },
 {
     name: "Singh",
-    msg: "Biiii"
+    msg: "Baiiii"
 }
 ]
