@@ -17,11 +17,11 @@ char_colors = {
 room1_end = [
 {
     name:"Cross", 
-    msg: "End of Room!"
+    msg: "It tis the end of Room!"
 },
 {
     name:"Cross", 
-    msg: "Continue"
+    msg: "Continue to the next!"
 },
 ]
 
@@ -55,6 +55,6 @@ mel_diag1 = [
 },
 {
     name: "Singh",
-    msg: "Biiii"
+    msg: "Baiiii"
 }
 ]
