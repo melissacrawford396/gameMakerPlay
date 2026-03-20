@@ -4,8 +4,13 @@ if (instance_exists(obj_dialog)) exit;
 // Gamemaker: x+1 --> right. x-1 <-- left
 var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 
-// vertical (y): S=1, W=-1
+// vertical (y): S=1, W=-1 up is negative one (-1) lol
 var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"));
+
+var _len = _hor!=0 || _ver!=0;
+var _dir = point_direction(0, 0, _hor, _ver);
+_hor = lengthdir_x(_len, _dir);
+_ver = lengthdir_y(_len, _dir);
 
 
 move_and_collide(_hor * move_speed, _ver * move_speed, tilemap, 
