@@ -16,6 +16,11 @@ _ver = lengthdir_y(_len, _dir);
 move_and_collide(_hor * move_speed, _ver * move_speed, tilemap, 
 undefined, undefined, undefined, move_speed, move_speed);
 
+// Clamp position to room edges
+x = clamp(x, 0 + sprite_xoffset, room_width - (sprite_width - sprite_xoffset));
+y = clamp(y, 0 + sprite_yoffset, room_height - (sprite_height - sprite_yoffset));
+
+
 if (_hor != 0 or _ver != 0)
 {
     // player is moving
@@ -42,3 +47,5 @@ if (keyboard_check_pressed(vk_space)){
     _inst.image_angle = facing;
     _inst.damage *= damage;
 }
+
+
