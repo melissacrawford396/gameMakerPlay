@@ -4,12 +4,22 @@ if (instance_exists(obj_dialog)) exit;
 // Gamemaker: x+1 --> right. x-1 <-- left
 var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 
-// vertical (y): S=1, W=-1
+// vertical (y): S=1, W=-1 up is negative one (-1) lol
 var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"));
+
+var _len = _hor!=0 || _ver!=0;
+var _dir = point_direction(0, 0, _hor, _ver);
+_hor = lengthdir_x(_len, _dir);
+_ver = lengthdir_y(_len, _dir);
 
 
 move_and_collide(_hor * move_speed, _ver * move_speed, tilemap, 
 undefined, undefined, undefined, move_speed, move_speed);
+
+// Clamp position to room edges
+x = clamp(x, 0 + sprite_xoffset, room_width - (sprite_width - sprite_xoffset));
+y = clamp(y, 0 + sprite_yoffset, room_height - (sprite_height - sprite_yoffset));
+
 
 if (_hor != 0 or _ver != 0)
 {
@@ -37,3 +47,5 @@ if (keyboard_check_pressed(vk_space)){
     _inst.image_angle = facing;
     _inst.damage *= damage;
 }
+
+

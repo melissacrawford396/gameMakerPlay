@@ -1,10 +1,18 @@
 if (current_message < 0) exit;
     
 var _str = messages[current_message].msg;
+var _len = string_length(_str);
 
-if (current_char < string_length(_str))
+if (current_char < _len)
 {
-    current_char += char_speed * (1 + keyboard_check(input_key));
+    // normal speed
+    current_char += char_speed;  
+    
+    if (keyboard_check_pressed(input_key)){
+        // if you click space again then show the whole message
+        current_char = _len;
+    }
+    
     draw_message = string_copy(_str, 0, current_char); // write text in bits
 }
 else if(keyboard_check_pressed(input_key))
