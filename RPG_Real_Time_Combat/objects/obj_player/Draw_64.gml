@@ -28,3 +28,6 @@ draw_text(_dx + _barw/2, _dy + _barh/2, $"LEVEL {level}");
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
+//I wonder if this here is why the other UI is misbehaving? 
+//I bet I have to shift this over? 
+

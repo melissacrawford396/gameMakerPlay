@@ -34,6 +34,7 @@
     {"name":"inst_3FB08741","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_2A5C81C5","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_69C08F0C","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_1E160883","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[
